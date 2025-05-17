@@ -1,11 +1,13 @@
 import unittest
-from src.app import app_function  # Replace with the actual function to be tested
+from src.app import main  # Ensure this matches your project structure
 
 class TestApp(unittest.TestCase):
 
-    def test_app_function(self):
-        # Replace with actual test logic
-        self.assertEqual(app_function(), expected_result)
+    def test_main(self):
+        # Capture the output of the main function
+        with self.assertLogs() as captured:
+            main()
+        self.assertIn("Hello, DevOps Engineer Dinesh!", captured.output[0])
 
 if __name__ == '__main__':
     unittest.main()
