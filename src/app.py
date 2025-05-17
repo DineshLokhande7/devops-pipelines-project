@@ -1,5 +1,9 @@
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
 def main():
-    print("Hello, DevOps Engineer Dinesh!")
+    logging.info("Hello, DevOps Engineer Dinesh!")
 
 if __name__ == "__main__":
     main()

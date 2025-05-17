@@ -1,5 +1,5 @@
 import unittest
-from src.app import main  # Ensure this matches your project structure
+from src.app import main
 
 class TestApp(unittest.TestCase):
 
