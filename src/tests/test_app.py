@@ -1,11 +1,10 @@
 import unittest
-from app import main  # Ensure this matches your project structure
+from src.app import main  # Ensure this matches your project structure
 
 class TestApp(unittest.TestCase):
 
     def test_main(self):
-        # Capture the output of the main function
-        with self.assertLogs() as captured:
+        with self.assertLogs(level='INFO') as captured:
             main()
         self.assertIn("Hello, DevOps Engineer Dinesh!", captured.output[0])
 
